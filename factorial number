@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    unsigned long long fact = 1;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Error handling for negative integers
+    if (num < 0) {
+        printf("Error: Factorial of negative integers is not defined.");
+    } 
+    else {
+        for (i = 1; i <= num; ++i) {
+            fact *= i; // Multiply fact by i on each iteration
+        }
+        printf("Factorial of %d = %llu", num, fact);
+    }
+
+    return 0;
+}
